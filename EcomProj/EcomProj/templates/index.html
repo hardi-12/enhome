@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Welcome To My Awesome Cart</title>
+    {% load static %}
+    <style>
+    body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    font-family:'Raleway',sans-serief;
+    color:  #fff
+    }
+      .banner{
+        height: 100vh;
+        width: 100%;
+        background-image:url('/static/shop/overlay.png'),url('/static/shop/org.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .banner .navbar{
+          margin-top: 3%;
+      }
+      .banner .navbar-brand{
+        color: #fff;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-left: 10%;
+      }
+      .banner .nav{
+        margin-right: 6%;
+      }
+      .banner .nav li a{
+        color:#aaa;
+        font-size: 1.2em;
+        font-weight:500;
+      }
+      .banner .nav li a:hover{
+        color: #fff
+      }
+
+      .banner .info{
+      margin-top:15%;
+      transform:translateY(-15%);
+      }
+       .banner .info h1{
+       font-size:2.5rem;
+       font-weight:700;
+       color:#fff;
+       letter-spacing:2px;
+
+       }
+       .banner .info p{
+       font-size:2em;
+       font-style:italics
+       font-weight:300;
+       color:#aaa;
+       letter-spacing:2px;
+
+       }
+        .banner .info a{
+        margin-left:50%;
+        transform:translateX(-50%);
+        color:#2F4F4F;
+        background:#FFC0CB;
+        padding:10px 50px;
+        font-size:1.8em;
+        border-radius: 50px;
+        font-weight: 700;
+        }
+        .banner .info a:hover{
+          color:#2F4F4F;
+        background:#FF1493;
+        }
+
+
+    </style>
+
+  </head>
+  <body>
+  <div class="container-fluid banner">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-md">
+          <div class="navbar-brand">
+              ENHOME
+          </div>
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+
+        </ul>
+          </nav>
+        <div class="col-md-8 offset-md-2 info">
+            <h1 class="text-center">ENHOME</h1>
+            <p class="text-center">Where dimensions take shape.</p>
+            <a class="btn btn-md text-center" href="/shop" role="button">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  </body>
+</html>

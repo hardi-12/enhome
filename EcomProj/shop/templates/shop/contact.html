@@ -1,0 +1,99 @@
+{% extends 'shop/base.html' %}
+{% block title %}Contact{% endblock %}
+{% block css %}
+{% load static %}
+body {
+background:url('/static/shop/back2.jpg');
+background:url('/static/shop/back2.jpg');
+
+background-position: center;
+        background-repeat: no-repeat;
+background-size: cover;
+}
+.google-map{
+margin:20px;
+}
+iframe{
+border-radius: 10px;
+}
+btnn{
+padding:10px 20px;
+
+}
+
+{% endblock %}
+
+{% block body %}
+
+ <section class="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30171.215450541316!2d72.85357143955078!3d19.046058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf21727f6e19%3A0x473006136ad440dc!2sK.%20J.%20Somaiya%20Institute%20of%20Engineering%20and%20Information%20Technology!5e0!3m2!1sen!2sin!4v1604331004049!5m2!1sen!2sin" width="100%" height="450px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="cardd mt-3">
+            <div class="card-header" style="background-color:#D3D3D3; color: #000; border-radius: 10px;font-family: 'Poppins',sans-serif;font-weight: 600;" >
+              Get In touch with us
+            </div>
+            <div class="card-body">
+              <form action="/shop/contact/" method="post">{% csrf_token %}
+                <div class="mb-3">
+                  <input type="text" name="name" class="form-control form-control-sm" placeholder="Full Name" required>
+
+              </div>
+              <div class="mb-3">
+                <input type="tel" name="phone" class="form-control form-control-sm" placeholder="Contact No" required>
+            </div>
+              <div class="mb-3">
+                  <input type="email" name="email" class="form-control form-control-sm" placeholder="Email-ID" required>
+              </div>
+              <div class="mb-3">
+                  <input type="text" name="subject" class="form-control form-control-sm" placeholder="Subject" required>
+                </div>
+                <div class="mb-3">
+                  <textarea rows="10" name="desc" class="form-control form-control-sm" placeholder="Your Message"></textarea>
+                </div>
+                <div class="mb-3">
+                  <input type="submit" class="btnn btn-success btn-lg" placeholder="Submit" style="border-radius: 10px;">
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-6 col-md-6 mt-3">
+          <table class="table table-striped tab" style=" background-color: #fff;border-radius: 10px">
+            <tr>
+              <th>Monday</th>
+              <td>9:00AM-5:00PM</th>
+            </tr>
+            <tr>
+              <th>Tuesday</th>
+              <td>9:00AM-5:00PM</th>
+            </tr>
+            <tr>
+              <th>Wednesday</th>
+              <td>9:00AM-5:00PM</th>
+            </tr>
+            <tr>
+              <th>Thursday</th>
+              <td>9:00AM-5:00PM</th>
+            </tr>
+            <tr>
+              <th>Friday</th>
+              <td>9:00AM-5:00PM</th>
+            </tr>
+            <tr>
+              <th>Saturday</th>
+              <td>9:00AM-2:00PM</th>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+              <td>Holiday</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </section>
+    <!--contact ends-->
+
+{% endblock %}

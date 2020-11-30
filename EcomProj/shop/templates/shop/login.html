@@ -1,0 +1,47 @@
+{% extends 'shop/base.html' %}
+{% block title %}Sign In{% endblock %}
+{% load crispy_forms_tags %}
+{% block body %}
+<style>
+{% load static %}
+    .errorlist{
+    color:red;
+    }
+   body {
+    background:url('/static/shop/back2.jpg');
+background:url('/static/shop/back2.jpg');
+
+background-position: center;
+        background-repeat: no-repeat;
+background-size: cover;
+color:#fff;
+    }
+    .container{
+    justify-contents:center;
+    align-itmes:center;
+
+    }
+
+</style>
+    <div class="cont">
+        <div class="container container-fluid">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h3>Login Form</h3><hr><br>
+            <form method="post" class="form-horizontal" >
+            <div class="form-group">
+            {% csrf_token %}
+        {{form.as_p}}
+        <p>Don't have an account? Create a new one<a href="/shop/register"> here</a></p>
+        <button type="submit" class="btn btn-success">Login</button>
+        {% if error %}
+        <li style="color:red;">{{error}}</li>
+        {% endif %}
+        </div>
+
+    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
