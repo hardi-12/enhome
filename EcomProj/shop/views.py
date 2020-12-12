@@ -15,7 +15,7 @@ import json
 from django.views.generic import View, TemplateView, CreateView, FormView
 # Create your views here.
 from django.http import HttpResponse
-MERCHANT_KEY = ''
+MERCHANT_KEY = '3fF1L0UHP9Ie%BUS'
 
 def index(request):
     # products = Product.objects.all()
@@ -127,7 +127,7 @@ def checkout(request):
         #return render(request, 'shop/checkout.html', {'thank':thank, 'id': id})
         #Request paytm to transfer the amount to your account after payment by user
         param_dict={
-            'MID': '',
+            'MID': 'UJSqHb70516339637689',
             'ORDER_ID': str(order.order_id),
             'TXN_AMOUNT': str(amount),
             'CUST_ID': 'email',
